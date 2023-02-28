@@ -524,6 +524,17 @@ trait InteractsWithInput
     }
 
     /**
+     * Reset all of the converted files for the request.
+     * TODO When add files to the requests. there is a bug related to convertedFiles not being updated.
+     *
+     * @return void
+     */
+    public function resetConvertedFiles()
+    {
+        $this->convertedFiles = null;
+    }
+
+    /**
      * Convert the given array of Symfony UploadedFiles to custom Laravel UploadedFiles.
      *
      * @param  array  $files
